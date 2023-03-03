@@ -9,7 +9,8 @@ setData(
 ...data,
 {tesk:text,day:day.split("T")[0],
 time:day.split("T")[1],
-id:data.length +1
+id:data.length +1,
+clicked:true,
 })
 
 }
