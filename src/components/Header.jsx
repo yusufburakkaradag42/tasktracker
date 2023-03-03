@@ -12,7 +12,7 @@ const Header = () => {
       <Button show={show} setShow={setShow} />
      {!show && <p className="text-center ">No tasks to show...</p>}
       {show && <Tasks data={data} setData={setData} />}
-      <AddTask />
+      <AddTask data={data} setData={setData} />
     </div>
   );
 };
