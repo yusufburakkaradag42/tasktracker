@@ -5,7 +5,12 @@ const [text, setText] = useState("")
 const [day, setDay] = useState("")
 const handleSubmit=(e)=>{
 e.preventDefault()
-
+setData(
+...data,
+{tesk:text,day:day.split("T")[0],
+time:day.split("T")[1],
+id:data.length +1
+})
 
 }
   return (
