@@ -6,23 +6,24 @@ const [day, setDay] = useState("")
 const handleSubmit=(e)=>{
 e.preventDefault()
 setData(
-...data,
-{tesk:text,day:day.split("T")[0],
+[...data,
+{tesk:text,
+day:day.split("T")[0],
 time:day.split("T")[1],
 id:data.length +1,
 clicked:true,
-})
-
-}
+}])
+console.log(data);
+};
   return (
     <div className="m-auto">
       <form onSubmit={(e)=>handleSubmit(e)}>
         <p>Task</p>
-        <input class="form-control " 
+        <input className="form-control " 
         type="text" 
         onChange={(e)=> setText(e.target.value)}></input>
         <p>Day & Time</p>
-        <input class="form-control" 
+        <input className="form-control" 
         type="datetime-local"
         onChange={(e)=>setDay(e.target.value)} ></input>
         <input
